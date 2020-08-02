@@ -101,18 +101,19 @@ def similarity(filename,dim):
                 dataset[file_name.replace(".txt","")].append([float(w) if i == 2 else w for i, w in enumerate(line.rstrip().split())])
 
     result=evaluate(W,vocab,dataset)
-    temp={}
+    temp,temp1={},{}
     for k in result:
         if(k["Test"] == "EN-RW-STANFORD"):
             temp = k
             results.append({"#": 1, "Test": "RW similarity", "Score": k["Score"], "OOV": k["OOV"], "Expand": []})
         elif(k["Test"] == "MSD-1030"):
-            temp = k
+            temp1 = k
             results.append({"#": 2, "Test": "Ambiguity", "Score": k["Score"], "OOV": k["OOV"], "Expand": []})
         else:
             score += k["Score"]
             notfound += int(k["OOV"].split("/")[0])
             total += int(k["OOV"].split("/")[1])
     result.remove(temp)
+    result.remove(temp1)
     results.append({"#":3,"Test":"Word similarity","Score":str(score/4),"OOV":str(notfound)+str("/")+str(total),"Expand":result})
     return results
