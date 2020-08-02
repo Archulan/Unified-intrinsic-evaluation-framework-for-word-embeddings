@@ -1,0 +1,109 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Charts {% endblock %} 
+
+<!-- Specific Plugin CSS goes HERE -->
+{% block plugin_stylesheets %}{% endblock plugin_stylesheets %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="content-wrapper">
+      <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Comparative Intrinsic Evaluation</h4>
+
+            <form class="forms-sample">
+              <div class="form-group" id="selectModel1">
+                <label for="exampleSelectModel1">Model1</label>
+                <select class="form-control" id="exampleSelectModel1" name="selection">
+                  <option>Model1</option>
+                  <option>Model2</option>
+                </select>
+              </div>
+              <div class="form-group" id="selectModel2">
+                <label for="exampleSelectModel2">Model2</label>
+                <select class="form-control" id="exampleSelectModel2" name="selection">
+                  <option>Model1</option>
+                  <option>Model2</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary mr-2">Submit</button>
+               </form>
+          </div>
+        </div>
+    </div>
+
+      <div class="row">
+        <div class="col-lg-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Line chart</h4>
+              <canvas id="lineChart" style="height:250px"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Bar chart</h4>
+              <canvas id="barChart" style="height:230px"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Area chart</h4>
+              <canvas id="areaChart" style="height:250px"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Doughnut chart</h4>
+              <canvas id="doughnutChart" style="height:250px"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Pie chart</h4>
+              <canvas id="pieChart" style="height:250px"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Scatter chart</h4>
+              <canvas id="scatterChart" style="height:250px"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+{% endblock content %}
+
+<!-- Specific Plugin JS goes HERE  -->
+{% block plugin_javascripts %}
+
+  <script src="/static/assets/vendors/chart.js/Chart.min.js"></script>
+
+{% endblock plugin_javascripts %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+  <script src="/static/assets/js/chart.js"></script>
+
+{% endblock javascripts %}
