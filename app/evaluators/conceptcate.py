@@ -56,7 +56,7 @@ def evaluate(labels_true, labels_pred,count):
     v_score=metrics.v_measure_score(labels_true, labels_pred)
     results["#"] = 6
     results["Test"] = "Concept categorization"
-    results["Score"] = v_score
+    results["Score"] = v_score*100
     results["OOV"] = count
 
     print("Concept categorization test done")
