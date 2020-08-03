@@ -107,7 +107,7 @@ def similarity(filename,dim):
             temp1 = k
             results.append({"#": 1, "Test": "RW similarity", "Score": k["Score"], "OOV": k["OOV"], "Expand": []})
         elif(k["Test"] == "MSD-1030"):
-            temp = k
+            temp1 = k
             results.append({"#": 2, "Test": "Ambiguity", "Score": k["Score"], "OOV": k["OOV"], "Expand": []})
         else:
             score += k["Score"]
