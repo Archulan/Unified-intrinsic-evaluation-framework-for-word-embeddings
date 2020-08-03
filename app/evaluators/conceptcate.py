@@ -56,14 +56,14 @@ def evaluate(labels_true, labels_pred,count):
     v_score=metrics.v_measure_score(labels_true, labels_pred)
     results["#"] = 6
     results["Test"] = "Concept categorization"
-    results["Score"] = v_score
+    results["Score"] = v_score*100
     results["OOV"] = count
 
     print("Concept categorization test done")
     print("---------------------------------------")
     return results
 def categorize(embeddingPath,dim):
-    datasetpath = 'c:\\users\\hp\\downloads\\flask-dashboard-corona-dark-master\\flask-dashboard-corona-dark-master\\app\\evaluators\\concept_cate\\bless.csv'
+    datasetpath = 'c:\\users\\hp\\Desktop\\fyp\\data\\Evaluator\\flask\\app\\evaluators\\concept_cate\\bless.csv'
     NUM_CLUSTERS = 17
     print("Concept categorization test is running....")
     # map category

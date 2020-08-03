@@ -93,7 +93,7 @@ def similarity(filename,dim):
     filenames = [
         'EN-WS-353-REL.txt','EN-WS-353-SIM.txt','EN-RW-STANFORD.txt','EN-MEN-TR-3k.txt','EN-VERB-143.txt','MSD-1030.txt'
     ]
-    prefix = 'c:\\users\\hp\\downloads\\flask-dashboard-corona-dark-master\\flask-dashboard-corona-dark-master\\app\\evaluators\\word-sim'
+    prefix = 'c:\\users\\hp\\Desktop\\fyp\\data\\Evaluator\\flask\\app\\evaluators\\word-sim'
     dataset=defaultdict(list)
     for file_name in filenames:
         with io.open('%s/%s' % (prefix, file_name), 'r',encoding='utf8') as f:
@@ -101,10 +101,10 @@ def similarity(filename,dim):
                 dataset[file_name.replace(".txt","")].append([float(w) if i == 2 else w for i, w in enumerate(line.rstrip().split())])
 
     result=evaluate(W,vocab,dataset)
-    temp={}
+    temp,temp1={},{}
     for k in result:
         if(k["Test"] == "EN-RW-STANFORD"):
-            temp = k
+            temp1 = k
             results.append({"#": 1, "Test": "RW similarity", "Score": k["Score"], "OOV": k["OOV"], "Expand": []})
         elif(k["Test"] == "MSD-1030"):
             temp = k
@@ -114,5 +114,6 @@ def similarity(filename,dim):
             notfound += int(k["OOV"].split("/")[0])
             total += int(k["OOV"].split("/")[1])
     result.remove(temp)
+    result.remove(temp1)
     results.append({"#":3,"Test":"Word similarity","Score":str(score/4),"OOV":str(notfound)+str("/")+str(total),"Expand":result})
     return results

@@ -172,7 +172,7 @@ def check(cluster, input_vectors):
         count += 1
     cluster.elements=clusternew
     cluster.outliers=outliernew
-    print("check done")
+
     if (len(cluster.elements)>2) and (len(cluster.outliers)>0):
 
         return True,cluster
@@ -189,7 +189,7 @@ def pprint(result):
     print("---------------------------------------")
 
 def outlier(path_vectors,dim):
-    path_dataset = 'c:\\users\\hp\\downloads\\flask-dashboard-corona-dark-master\\flask-dashboard-corona-dark-master\\app\\evaluators\\wiki-sim'
+    path_dataset = 'c:\\users\\hp\\Desktop\\fyp\\data\\Evaluator\\flask\\app\\evaluators\\wiki-sem\\'
     dataset = OutlierDetectionDataset(path_dataset)
     dataset.readDataset()
     input_vectors, dimensions = getting_vectors(path_vectors, dataset.setWords,dim)
