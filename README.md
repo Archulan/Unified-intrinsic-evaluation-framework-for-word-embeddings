@@ -4,8 +4,8 @@
 
 ```bash
 $ # Get the code
-$ git clone https://github.com/app-generator/flask-dashboard-corona-dark.git
-$ cd flask
+$ git clone https://github.com/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings.git
+$ cd Unified-intrinsic-evaluation-framework-for-word-embeddings
 $
 $ # Virtualenv modules installation (Unix based systems)
 $ virtualenv env
