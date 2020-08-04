@@ -1,5 +1,11 @@
 # Unified-intrinsic-evaluation-framework-for-word-embeddings
 
+![GitHub repo size](https://img.shields.io/github/repo-size/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=red&style=plastic)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?style=plastic)
+![GitHub](https://img.shields.io/github/license/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=orange&style=plastic)
+![GitHub language count](https://img.shields.io/github/languages/count/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=brightgreen&style=plastic)
+![GitHub top language](https://img.shields.io/github/languages/top/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=blueviolet&style=plastic)
+
 This is a final year project at the Department of Computer Science & Engineering, Faculty of Engineering, University of Moratuwa.
 
 ## How to use it
