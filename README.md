@@ -39,6 +39,7 @@ $ # --port=5000    - specify the app port (default 5000)
 $ flask run --host=0.0.0.0 --port=5000
 
 $ # Access the dashboard in browser: http://127.0.0.1:5000/
+$ # Those running virtual machines(e.g: Google cloud platform, AWS), a firewall rule needs to be added. Allow TCP for port 5000. Then access the dashboard in browser http://(external IP):5000/
 ```
 
 > Note: To use the app, please access the registration page and create a new user. After authentication, the app will unlock the private pages.
