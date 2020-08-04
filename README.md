@@ -235,6 +235,3 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 - [Boilerplate Code](https://github.com/app-generator/boilerplate-code) - Index published on Github
 
 <br />
-
----
-[Flask Dashboard - Corona Dark Design](https://appseed.us/admin-dashboards/flask-dashboard-corona-dark) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
