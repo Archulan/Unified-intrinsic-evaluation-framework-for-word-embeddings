@@ -2,13 +2,14 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=red&style=plastic)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?style=plastic)
+![GitHub star count](https://img.shields.io/github/stars/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=green&style=plastic)
 ![GitHub](https://img.shields.io/github/license/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=orange&style=plastic)
 ![GitHub language count](https://img.shields.io/github/languages/count/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=brightgreen&style=plastic)
 ![GitHub top language](https://img.shields.io/github/languages/top/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=blueviolet&style=plastic)
 
 This is a final year project at the Department of Computer Science & Engineering, Faculty of Engineering, University of Moratuwa.
 
-## How to use it
+> ## How to use the tool
 
 ```bash
 $ # Get the code
@@ -44,8 +45,8 @@ $ # --host=0.0.0.0 - expose the app on all network interfaces (default 127.0.0.1
 $ # --port=5000    - specify the app port (default 5000)  
 $ flask run --host=0.0.0.0 --port=5000
 
-$ # Access the dashboard in browser: http://127.0.0.1:5000/
-$ # Those running virtual machines(e.g: Google cloud platform, AWS), a firewall rule needs to be added. Allow TCP for port 5000. Then access the dashboard in browser http://(external IP):5000/
+# Access the dashboard in browser: http://127.0.0.1:5000/
+# Those running virtual machines(e.g: Google cloud platform, AWS), a firewall rule needs to be added. Allow TCP for port 5000. Then access the dashboard in browser http://(external IP):5000/
 ```
 
 > Note: To use the app, please access the registration page and create a new user. After authentication, the app will unlock the private pages.
