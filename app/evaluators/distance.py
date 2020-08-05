@@ -93,7 +93,7 @@ def similarity(filename,dim):
     filenames = [
         'EN-WS-353-REL.txt','EN-WS-353-SIM.txt','EN-RW-STANFORD.txt','EN-MEN-TR-3k.txt','EN-VERB-143.txt','MSD-1030.txt'
     ]
-    prefix = 'c:\\users\\hp\\downloads\\flask-dashboard-corona-dark-master\\flask-dashboard-corona-dark-master\\app\\evaluators\\word-sim'
+    prefix = 'c:\\users\\hp\\Desktop\\fyp\\data\\Evaluator\\flask\\app\\evaluators\\word-sim'
     dataset=defaultdict(list)
     for file_name in filenames:
         with io.open('%s/%s' % (prefix, file_name), 'r',encoding='utf8') as f:
@@ -104,7 +104,7 @@ def similarity(filename,dim):
     temp,temp1={},{}
     for k in result:
         if(k["Test"] == "EN-RW-STANFORD"):
-            temp = k
+            temp1 = k
             results.append({"#": 1, "Test": "RW similarity", "Score": k["Score"], "OOV": k["OOV"], "Expand": []})
         elif(k["Test"] == "MSD-1030"):
             temp1 = k

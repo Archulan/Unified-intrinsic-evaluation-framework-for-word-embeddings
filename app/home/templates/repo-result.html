@@ -1,0 +1,162 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Tables {% endblock %} 
+
+<!-- Specific Plugin CSS goes HERE -->
+{% block plugin_stylesheets %}{% endblock plugin_stylesheets %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="content-wrapper">
+
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex flex-row justify-content-between">
+              <h4 class="card-title mb-1">Tests</h4>
+              <h4 class="card-title mb-1">Score</h4>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="preview-list">
+                  <div class="preview-item border-bottom">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-primary">
+                        <i class="mdi mdi-file-document"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content d-sm-flex flex-grow">
+                      <div class="flex-grow">
+                        <h6 class="preview-subject">Word similarity Test</h6>
+                        <p class="text-muted mb-0">average of 4 different similarity test </p>
+                      </div>
+                      <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                         <h6 class="preview-subject">{{repo['wordsimilarity']}}</h6>
+                        <p class="text-muted mb-0"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview-item border-bottom">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-success">
+                        <i class="mdi mdi-receipt"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content d-sm-flex flex-grow">
+                      <div class="flex-grow">
+                        <h6 class="preview-subject">Sem analogy</h6>
+                        <p class="text-muted mb-0">Semantic analogy</p>
+                      </div>
+                      <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                         <h6 class="preview-subject">{{repo['semanalogy']}}</h6>
+                        <p class="text-muted mb-0"> </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview-item border-bottom">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-info">
+                        <i class="mdi mdi-border-color"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content d-sm-flex flex-grow">
+                      <div class="flex-grow">
+                        <h6 class="preview-subject">Syn analogy</h6>
+                        <p class="text-muted mb-0">Syntactic analogy test</p>
+                      </div>
+                      <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                         <h6 class="preview-subject">{{repo['synanalogy']}}</h6>
+                        <p class="text-muted mb-0"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview-item border-bottom">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-danger">
+                        <i class="mdi mdi-book-minus"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content d-sm-flex flex-grow">
+                      <div class="flex-grow">
+                        <h6 class="preview-subject">RW test</h6>
+                        <p class="text-muted mb-0">Rare word similarity</p>
+                      </div>
+                      <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                        <h6 class="preview-subject">{{repo['rw']}}</h6>
+                        <p class="text-muted mb-0"> </p>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="preview-item border-bottom">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-success">
+                        <i class="mdi mdi-chart-bubble"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content d-sm-flex flex-grow">
+                      <div class="flex-grow">
+                        <h6 class="preview-subject">Concept categorization</h6>
+                        <p class="text-muted mb-0">Using kmeans cluster</p>
+                      </div>
+                      <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                        <h6 class="preview-subject">{{repo['conceptcate']}}</h6>
+                        <p class="text-muted mb-0"> </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview-item border-bottom">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-info">
+                        <i class="mdi mdi-book-multiple"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content d-sm-flex flex-grow">
+                      <div class="flex-grow">
+                        <h6 class="preview-subject">Outlier detection</h6>
+                        <p class="text-muted mb-0"></p>
+                      </div>
+                      <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                         <h6 class="preview-subject">{{repo['outlier']}}</h6>
+                        <p class="text-muted mb-0"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-warning">
+                        <i class="mdi mdi-chart-pie"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content d-sm-flex flex-grow">
+                      <div class="flex-grow">
+                        <h6 class="preview-subject">Ambiguity</h6>
+                        <p class="text-muted mb-0">Lexical ambiguity Test</p>
+                      </div>
+                      <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                         <h6 class="preview-subject">{{repo['ambiguity']}}</h6>
+                        <p class="text-muted mb-0"></p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+
+
+
+{% endblock content %}
+
+<!-- Specific Plugin JS goes HERE  -->
+{% block plugin_javascripts %}{% endblock plugin_javascripts %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

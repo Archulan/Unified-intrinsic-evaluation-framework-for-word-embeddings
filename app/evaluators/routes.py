@@ -16,7 +16,7 @@ from app.base.models import db, Repository
 
 @blueprint.route('/upload-file', methods=['GET', 'POST'])
 def upload_file():
-    base_dir = 'c:\\users\\hp\\downloads\\flask-dashboard-corona-dark-master\\flask-dashboard-corona-dark-master\\app\\base\\uploads'
+    base_dir = 'c:\\users\\hp\\Desktop\\fyp\\data\\Evaluator\\flask\\app\\base\\uploads'
 
     if request.method == 'POST':
         # check if the post request has the file part
@@ -34,7 +34,7 @@ def upload_file():
                 path = os.path.join(base_dir,
                                     filename)
                 repofolder = os.path.join(
-                    'c:\\users\\hp\\downloads\\flask-dashboard-corona-dark-master\\flask-dashboard-corona-dark-master\\app\\base\\repository',
+                    'c:\\users\\hp\\Desktop\\fyp\\data\\Evaluator\\flask\\app\\base\\repository',
                     filename)
                 file.save(path)
         else:
@@ -42,13 +42,14 @@ def upload_file():
             path = os.path.join(base_dir, name + ".txt")
             wget.download(url, path)
             repofolder = os.path.join(
-                'c:\\users\\hp\\downloads\\flask-dashboard-corona-dark-master\\flask-dashboard-corona-dark-master\\app\\base\\repository',
+                'c:\\users\\hp\\Desktop\\fyp\\data\\Evaluator\\flask\\app\\base\\repository',
                 name + ".txt")
+
         result = similarity(path, dim)
-        result1 = analogy(path, dim)
+        #result1 = analogy(path, dim)
         result2=categorize(path,dim)
         result3= out(path,dim)
-        result.extend(result1)
+        #result.extend(result1)
         result.append(result2)
         result.append(result3)
         sim, rw, synana, semana, ambi, concept, outlier, oop = 0, 0, 0, 0, 0, 0, 0, 0
@@ -99,3 +100,5 @@ def upload_file():
         return render_template('result.html', records=result, colnames=cols, title=response_body["modelname"])
     return ""
     # render_template("result.html")
+
+

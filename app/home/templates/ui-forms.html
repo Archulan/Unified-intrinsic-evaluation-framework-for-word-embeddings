@@ -8,26 +8,27 @@
   <!-- Plugin css for this page -->
   <link rel="stylesheet" href="/static/assets/vendors/select2/select2.min.css">
   <link rel="stylesheet" href="/static/assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
-
+  <style type="text/css">
+  div#loading {
+    width: 1000px;
+    height:1000px;
+    display: none;
+    background: url(/static/assets/css/ajax-loader.gif) no-repeat;
+    cursor: wait;
+    text-align:center;
+    }
+</style>
   <!-- End plugin css for this page -->
 
 {% endblock plugin_stylesheets %}
 
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}{% endblock stylesheets %}
-<style type="text/css">
-  div#loading {
-    width: 35px;
-    height: 35px;
-    display: none;
-    background: url(/static/assets/css/ajax-loader.gif) no-repeat;
-    cursor: wait;
-    }
-</style>
+
 
 
 {% block content %}
- <div id="loading" style="height:100%"></div>
+ <div id="loading" style="height:100%"> </div>
   <div id="content-wrapper" class="content-wrapper">
       <div class="col-12 grid-margin stretch-card">
         <div class="card">
