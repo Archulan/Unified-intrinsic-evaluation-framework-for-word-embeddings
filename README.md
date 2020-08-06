@@ -9,7 +9,7 @@
 
 This is a final year project at the Department of Computer Science & Engineering, Faculty of Engineering, University of Moratuwa.
 
-> ## How to use the tool
+## How to use the tool
 
 ```bash
 $ # Get the code
