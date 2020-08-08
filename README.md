@@ -132,7 +132,6 @@ The *Base* blueprint handles the authentication (routes and forms) and assets ma
    |
    |-- ************************************************************************
 ```
-
 <br />
 
 > App / Home Blueprint
@@ -164,7 +163,6 @@ The *Home* blueprint handles UI Kit pages for authenticated users. This is the p
    |
    |-- ************************************************************************
 ```
-
 <br />
 
 ## Deployment
