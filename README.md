@@ -1,5 +1,4 @@
 # Unified-intrinsic-evaluation-framework-for-word-embeddings
-
 ![GitHub repo size](https://img.shields.io/github/repo-size/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=red&style=plastic)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?style=plastic)
 ![GitHub star count](https://img.shields.io/github/stars/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=green&style=plastic)
@@ -50,7 +49,6 @@ $ flask run --host=0.0.0.0 --port=5000
 ```
 
 > Note: To use the app, please access the registration page and create a new user. After authentication, the app will unlock the private pages.
-
 <br />
 
 ## Code-base structure
