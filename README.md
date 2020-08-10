@@ -1,42 +1,52 @@
 # Unified-intrinsic-evaluation-framework-for-word-embeddings
 
-## How to use it
+![GitHub repo size](https://img.shields.io/github/repo-size/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=red&style=plastic)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?style=plastic)
+![GitHub star count](https://img.shields.io/github/stars/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=green&style=plastic)
+![GitHub](https://img.shields.io/github/license/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=orange&style=plastic)
+![GitHub language count](https://img.shields.io/github/languages/count/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=brightgreen&style=plastic)
+![GitHub top language](https://img.shields.io/github/languages/top/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings?color=blueviolet&style=plastic)
+
+This is a final year project at the Department of Computer Science & Engineering, Faculty of Engineering, University of Moratuwa.
+
+> ## How to use the tool
 
 ```bash
 $ # Get the code
-$ git clone https://github.com/app-generator/flask-dashboard-corona-dark.git
-$ cd flask
-$
+$ git clone https://github.com/Archulan/Unified-intrinsic-evaluation-framework-for-word-embeddings.git
+$ cd Unified-intrinsic-evaluation-framework-for-word-embeddings
+
 $ # Virtualenv modules installation (Unix based systems)
 $ virtualenv env
 $ source env/bin/activate
-$
+
 $ # Virtualenv modules installation (Windows based systems)
 $ # virtualenv env
 $ # .\env\Scripts\activate
-$
+
 $ # Install modules - SQLite Database
 $ pip3 install -r requirements.txt
-$
+
 $ # OR with PostgreSQL connector
 $ # pip install -r requirements-pgsql.txt
-$
+
 $ # Set the FLASK_APP environment variable
 $ (Unix/Mac) export FLASK_APP=run.py
 $ (Windows) set FLASK_APP=run.py
 $ (Powershell) $env:FLASK_APP = ".\run.py"
-$
+
 $ # Set up the DEBUG environment
 $ # (Unix/Mac) export FLASK_ENV=development
 $ # (Windows) set FLASK_ENV=development
 $ # (Powershell) $env:FLASK_ENV = "development"
-$
+
 $ # Start the application (development mode)
 $ # --host=0.0.0.0 - expose the app on all network interfaces (default 127.0.0.1)
 $ # --port=5000    - specify the app port (default 5000)  
 $ flask run --host=0.0.0.0 --port=5000
-$
-$ # Access the dashboard in browser: http://127.0.0.1:5000/
+
+# Access the dashboard in browser: http://127.0.0.1:5000/
+# Those running virtual machines(e.g: Google cloud platform, AWS), a firewall rule needs to be added. Allow TCP for port 5000. Then access the dashboard in browser http://(external IP):5000/
 ```
 
 > Note: To use the app, please access the registration page and create a new user. After authentication, the app will unlock the private pages.
@@ -235,6 +245,3 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 - [Boilerplate Code](https://github.com/app-generator/boilerplate-code) - Index published on Github
 
 <br />
-
----
-[Flask Dashboard - Corona Dark Design](https://appseed.us/admin-dashboards/flask-dashboard-corona-dark) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
