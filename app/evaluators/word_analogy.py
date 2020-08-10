@@ -99,17 +99,14 @@ def evaluate(filenames,prefix, W, vocab, ivocab,words,result):
 
 
     OOV=num_lines-len(val)
-    result[filenames.replace("txt", "")] = (np.mean(val) * 100, np.sum(val), len(val),OOV)
+    result[filenames.replace(".txt", "")] = (np.mean(val) * 100, np.sum(val), len(val),OOV)
     #results.append(result)
     #pprint(result)
     return result
 def analogy(filename,dim):
     print("Word analogy test is running")
     W, vocab, ivocab,words = generate(filename,dim)
-    count_sem = 0
-    correct_sem = 0
-    count_syn = 0
-    correct_syn = 0
+
     filenames = [
         'currency.txt','capital-common-countries.txt','capital-world.txt',
         'city-in-state.txt', 'family.txt', 'gram1-adjective-to-adverb.txt',
@@ -121,23 +118,28 @@ def analogy(filename,dim):
 
     results={}
     result,result_sem,result_syn=[],[],[]
-    i,oov1,tot1,oov2,tot2=0,0,0,0,0
+    oov1,oov2=0,0
     for file in filenames:
       evaluate(file,prefix,W,vocab,ivocab,words,results)
+    semfiles=['currency','capital-common-countries','capital-world','city-in-state', 'family']
+    correct_syn, correct_sem, count_syn, count_sem=0,0,0,0
     for k, v in results.items():
-      if (i < 5):
+      if (k in semfiles):
           count_sem += v[2]
           correct_sem += v[1]
-          oov1+=v[0]
+          oov1+=v[3]
+          print(v[1],v[2])
           result_sem.append({"#":"","Test":k,"Score":v[0],"OOV":v[3]})
       else:
           count_syn += v[2]
           correct_syn += v[1]
-          oov2 += v[0]
+          oov2 += v[3]
+          print(v[1], v[2])
           result_syn.append({"#":"","Test": k, "Score": v[0], "OOV": v[3]})
-      i += 1
-    result.append({"#":4,"Test": "Syn analogy","Score":(correct_syn/count_syn)*100,"OOV":str(oov2)+"/"+str(count_syn),"Expand":result_syn})
-    result.append({"#":5, "Test": "Sem analogy", "Score": (correct_sem/count_sem)*100, "OOV":str(oov1)+"/"+str(count_sem),"Expand":result_sem})
+    score1=float(correct_syn)/count_syn
+    score2=float(correct_sem)/count_sem
+    result.append({"#":4,"Test": "Syn analogy","Score":score1*100,"OOV":str(oov2)+"/"+str(count_syn),"Expand":result_syn})
+    result.append({"#":5, "Test": "Sem analogy", "Score": score2*100, "OOV":str(oov1)+"/"+str(count_sem),"Expand":result_sem})
     print("analogy test done..")
     return result
 

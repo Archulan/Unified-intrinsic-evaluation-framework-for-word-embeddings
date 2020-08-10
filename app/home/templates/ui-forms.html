@@ -10,12 +10,14 @@
   <link rel="stylesheet" href="/static/assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
   <style type="text/css">
   div#loading {
-    width: 1000px;
-    height:1000px;
+    width: 100%;
+    height:500px;
     display: none;
     background: url(/static/assets/css/ajax-loader.gif) no-repeat;
     cursor: wait;
-    text-align:center;
+    background-position:center;
+    background-color:black;
+    background-size:250px;
     }
 </style>
   <!-- End plugin css for this page -->
@@ -28,7 +30,7 @@
 
 
 {% block content %}
- <div id="loading" style="height:100%"> </div>
+ <div id="loading" > </div>
   <div id="content-wrapper" class="content-wrapper">
       <div class="col-12 grid-margin stretch-card">
         <div class="card">

@@ -46,10 +46,10 @@ def upload_file():
                 name + ".txt")
 
         result = similarity(path, dim)
-        #result1 = analogy(path, dim)
+        result1 = analogy(path, dim)
         result2=categorize(path,dim)
         result3= out(path,dim)
-        #result.extend(result1)
+        result.extend(result1)
         result.append(result2)
         result.append(result3)
         sim, rw, synana, semana, ambi, concept, outlier, oop = 0, 0, 0, 0, 0, 0, 0, 0
