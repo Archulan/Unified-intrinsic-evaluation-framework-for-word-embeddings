@@ -114,7 +114,7 @@ def analogy(filename,dim):
         'gram5-present-participle.txt', 'gram6-nationality-adjective.txt',
         'gram7-past-tense.txt', 'gram8-plural.txt', 'gram9-plural-verbs.txt'
     ]
-    prefix = 'c:\\users\\hp\\Desktop\\fyp\\data\\Evaluator\\flask\\app\\evaluators\\question-data'
+    prefix = 'app/evaluators/question-data'
 
     results={}
     result,result_sem,result_syn=[],[],[]
