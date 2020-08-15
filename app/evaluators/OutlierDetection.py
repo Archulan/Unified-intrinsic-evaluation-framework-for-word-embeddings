@@ -189,7 +189,7 @@ def pprint(result):
     print("---------------------------------------")
 
 def outlier(path_vectors,dim):
-    path_dataset = 'app/evaluators/wiki-sem'
+    path_dataset = 'app/evaluators/wiki-sem/'
     dataset = OutlierDetectionDataset(path_dataset)
     dataset.readDataset()
     input_vectors, dimensions = getting_vectors(path_vectors, dataset.setWords,dim)
